@@ -1,0 +1,52 @@
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+	ui = true
+[alias]
+    st = status
+    ci = commit
+    co = checkout
+    nffmerge = merge --no-ff --no-commit
+    ffmerge = merge --ff-only
+    llog = log --branches --graph --decorate=full
+    llogr = log --branches --graph --decorate=full --remotes
+    llogo = log --graph --oneline --all
+    tags = tag -ln
+    br = branch -vv
+    brr = branch -avv
+    unstage = reset HEAD --
+    untrack = rm --cached
+    ignore = update-index --assume-unchanged
+    unignore = update-index --no-assume-unchanged
+    wtm = show-merges
+    wtmr = show-remote-merges
+    gcp = gc --aggressive --prune=0
+    track = branch --set-upstream
+    poh = push origin HEAD
+    tree = log --oneline --decorate --all --graph
+    cln = clean -f -x -d
+    reset = reset --hard
+[user]  
+    name = Thomas Bendig
+    email = dev@tomben.de
+#[difftool "sourcetree"]
+#    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+#    path = 
+#[mergetool "sourcetree"]
+#    cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+##    trustExitCode = true
+[core]
+    editor = vim
+    excludesfile = ~/.gitignore_global
+
+[push]
+	default = simple
+[merge]
+	tool = extMerge
+[mergetool "extMerge"]
+	cmd = extMerge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+[mergetool]
+	trustExitCode = false
+[diff]
+	external = extDiff
