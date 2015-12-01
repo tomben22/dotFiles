@@ -100,6 +100,33 @@ defaults write com.apple.screencapture disable-shadow -bool false
 # Enable subpixel font rendering on non-Apple LCDs
 defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
+
+###############################################################################
+# Reduce animations                                                           #
+###############################################################################
+
+# Disable Open/Close Window Animations
+defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
+
+# Disable Quick Look Animations
+defaults write -g QLPanelAnimationDuration -float 0
+
+# Disable Window Size Adjustment Animations
+defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+
+# Disable Dock Animations
+defaults write com.apple.dock launchanim -bool false
+
+# Disable the “Get Info” Animation
+defaults write com.apple.finder DisableAllAnimations -bool true
+
+# Disable animation when opening the Info window in OS X Finder (cmd⌘ + i).
+defaults write com.apple.finder DisableAllAnimations -bool true
+
+# Disable animations when you open an application from the Dock.
+defaults write com.apple.dock launchanim -bool false
+
+
 ###############################################################################
 # Finder                                                                      #
 ###############################################################################
@@ -279,6 +306,9 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 
 # Add a context menu item for showing the Web Inspector in web views
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+
+#Disable the standard delay in rendering a Web page.
+defaults write com.apple.Safari WebKitInitialTimedLayoutDelay 0.25
 
 ###############################################################################
 # Mail                                                                        #
