@@ -27,6 +27,8 @@
 #   Set Default Editor (change 'Nano' to the editor of your choice)
 #   ------------------------------------------------------------
     export EDITOR="/usr/bin/sublime -w"
+   # ln -s /Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl /usr/bin
+
 
 #   Set default blocksize for ls, df, du
 #   ------------------------------------------------------------
@@ -163,10 +165,11 @@
 #   4.  SEARCHING
 #   ---------------------------
 
-    alias qfind="find . -name "                 # qfind:    Quickly search for file
+    #alias qfind="find . -name "                 # qfind:    Quickly search for file
     ff () { /usr/bin/find . -name "$@" ; }      # ff:       Find file under the current directory
     ffs () { /usr/bin/find . -name "$@"'*' ; }  # ffs:      Find file whose name starts with a given string
     ffe () { /usr/bin/find . -name '*'"$@" ; }  # ffe:      Find file whose name ends with a given string
+    qfind () { /usr/bin/find / -iname "$@" 2>/dev/null ; }
 
 #   spotlight: Search for a file using MacOS Spotlight's metadata
 #   -----------------------------------------------------------
@@ -241,12 +244,12 @@
 
 
 #   ---------------------------------------
-#   7.  Custom CSC
+#   7.  Custom Company Proxy 
 #   ---------------------------------------
 
 #   PROXY TERMINAL SETTINGS CSC
-#   export HTTP_PROXY='http://webgate.de.eu.csc.com:8080'
-#   export http_proxy='http://webgate.de.eu.csc.com:8080'
+#   export HTTP_PROXY='URL:PORT'
+#   export http_proxy='URL:PORT'
 
 
 #   ---------------------------------------
