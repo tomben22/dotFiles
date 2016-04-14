@@ -14,6 +14,7 @@ cask install android-studio
 cask install cocoapods
 cask install postman
 cask install virtualbox
+cask install xca
 
 #install casks general
 cask install 1password
@@ -29,3 +30,4 @@ cask install sizeup
 cask install vlc
 cask install evernote
 cask install soundnode
+cask install tripmode
