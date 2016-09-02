@@ -20,9 +20,9 @@
 
 #   Set Paths & other Vars
 #   ------------------------------------------------------------
-    export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/
-    export ANDROID_HOME=/Users/tbendig/Library/Android/sdk/
-    export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/IBM/MobileFirst-CLI:/Users/tbendig/Library/Android/sdk/tools:$ANDROID_HOME/platform-tools/:$HOME/OwnDevScripts
+    export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/
+    export ANDROID_HOME=/Users/tbendig/Library/Android/sdk
+    export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/IBM/MobileFirst-CLI:$ANDROID_HOME/platform-tools/:$HOME/OwnDevScripts:/usr/local/apache-maven-3.3.9/bin
 
 #   Set Default Editor (change 'Nano' to the editor of your choice)
 #   ------------------------------------------------------------
@@ -110,6 +110,11 @@
 #   ------------------------------------------------------
     alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.apple'
     alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
+#   show / hide Desktop Files
+#   ------------------------------------------------------
+		alias showDesktopFiles='defaults write com.apple.finder CreateDesktop -bool true; killall Finder'
+		alias hideDesktopFiles='defaults write com.apple.finder CreateDesktop -bool false; killall Finder'
 
 #   cdf:  'Cd's to frontmost window of MacOS Finder
 #   ------------------------------------------------------
@@ -269,3 +274,8 @@
 
 
 
+
+# Setting PATH for Python 3.5
+# The orginal version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.5/bin:${PATH}"
+export PATH

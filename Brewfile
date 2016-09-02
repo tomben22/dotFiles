@@ -30,4 +30,5 @@ cask install sizeup
 cask install vlc
 cask install evernote
 cask install soundnode
-cask install tripmode
+cask install tripmodei
+cask install handbrake
