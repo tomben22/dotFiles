@@ -74,6 +74,7 @@
     trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the MacOS trash
     ql () { qlmanage -p "$*" >& /dev/null; }    # ql:           Opens any file in MacOS Quicklook Preview
     alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file on MacOS Desktop
+    alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'" # tree: A simple alias will allow you to view folder trees
 
 
 #   lr:  Full Recursive Directory Listing
